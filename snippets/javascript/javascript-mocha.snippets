@@ -1,0 +1,13 @@
+snippet it 'test case asynchronous' b
+	it('${1:}', () => {
+		${0:${VISUAL}}
+	});
+snippet itd 'test case asynchronous' b
+	it('${1:}', (done) => {
+		${0:${VISUAL}}
+		done();
+	});
+snippet des 'description of a test case' b
+	describe('${1:}' () => {
+		${0:${VISUAL}}
+	});
