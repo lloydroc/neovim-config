@@ -1,13 +1,7 @@
-priority -50
-
-snippet xml "XML declaration" b
-	<?xml version="1.0"?>
-endsnippet
-
-snippet t "Simple tag" b
-	<${1:tag}>
-		${2:content}
-	</$1>
+snippet sls
+	leaf ${1:leaf} {
+		type string;
+	}
 endsnippet
 
 snippet ti "Inline tag" b
