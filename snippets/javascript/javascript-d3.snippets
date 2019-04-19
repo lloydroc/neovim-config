@@ -1,8 +1,28 @@
-snippet attr 'attribute setting' b
-	.attr('${1:attribute}',${2:setting})
-snippet cla 'class' b
+snippet attr 'attribute setting'
+	.attr('${1:attribute}','${2:setting}')
+snippet cla 'class'
 	.classed('${1:class}',true)
-snippet fund 'function(d)' b
+snippet fund 'function(d)'
 	function(d) { return ${1}; }
-snippet fund 'function(d)' b
+snippet fundi 'function(d,i)'
 	function(d,i) { return ${1}; }
+snippet d3ex
+	<!DOCTYPE html>
+	<meta charset="utf-8">
+	<html>
+		<head></head>
+		<body>
+			<svg id="mysvg" width="600" height="600"></svg>
+		</body>
+	<style>
+	</style>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script>
+	var margin = {top: 20, right: 30, bottom: 30, left: 40};
+
+	var svg = d3.select('#mysvg'),
+			width = svg.attr('width') - margin.left - margin.right,
+			height = svg.attr('height') - margin.top - margin.bottom;
+
+	</script>
+	</html>

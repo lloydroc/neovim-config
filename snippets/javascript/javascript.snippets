@@ -1,7 +1,27 @@
 snippet cls
-	console.log("${1}");
+	console.log('${1}');
+snippet cls2
+	console.log('${1}',${2});
 snippet cl
 	console.log(${1});
+snippet cw
+	console.warn(${1});
+snippet ce
+	console.error(${1});
+snippet clj
+	console.log(JSON.stringify(${1},null,2));
+snippet ld
+	logger.debug(${1});
+snippet lds
+	logger.debug('${1}');
+snippet li
+	logger.info(${1});
+snippet lis
+	logger.info('${1}');
+snippet le
+	logger.error(${1});
+snippet les
+	logger.error('${1}');
 snippet fun "function (fun)" w
 	function ${1:function_name}(${2:argument}) {
 		${3:code}
@@ -10,3 +30,9 @@ snippet for "for loop"
 	for(var i=0;i<${1:MAX};i++) {
 	  ${3:code}
 	}
+snippet require
+	var ${1} = require('${2}');
+snippet doce
+	var ${1} = document.getElementById(${2});
+snippet docq
+	var ${1} = document.querySelector(${2});

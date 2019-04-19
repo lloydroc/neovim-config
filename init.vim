@@ -1,10 +1,12 @@
 set number
+set list
 set nohlsearch
-let mapleader=","
+let mapleader="/"
 
 "Mappings
 noremap <Leader>ev :e $MYVIMRC<cr>
 nnoremap <Leader>sv :source $MYVIMRC<cr>
+inoremap jk <esc>
 
 "remove trailing whitespace
 nmap <Leader>rtw :%s/\s\+$//e<CR>
@@ -33,6 +35,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Files
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'MarcWeber/vim-addon-mw-utils' " Need for vim-snipmate
 Plug 'tomtom/tlib_vim' " needed for vim-snipmate
 Plug 'garbas/vim-snipmate'
@@ -55,7 +58,7 @@ call plug#end()
 
 "Plugin Settings
 "CtrlP
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|class\|cisco-ios\|netsim\|ncs-cdb\|state\|logs\|packages/juniper-junos\|dist'
+let g:ctrlp_custom_ignore = 'node_modules\|\.DS_Store\|\.git\|class\|cisco-ios\|netsim\|ncs-cdb\|state\|logs\|packages/juniper-junos\|dist'
 "let g:ctrlp_user_command = 'find %s -type f | grep -v "`cat .ctrlpignore`"'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_autoignore_extension = 0
